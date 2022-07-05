@@ -1,12 +1,12 @@
 .header
-  position: fixed
+  position: absolute
   top: 0
   left: 0
   width: 100%
   padding: 35px 0 30px 0
   background-color: transparent
   border-bottom: 1px solid #7E868E  
-  &__row  
+  &__container 
     display: flex
     justify-content: space-between
     align-items: center
@@ -23,11 +23,27 @@
     display: flex
     justify-content: space-between
     align-items: center
+  &_fixed
+    position: fixed
+    background-color: #fff
+    .header__logo
+      color: $greydark
+      &:hover
+        color: $accent
+    .icon-text
+      color: $greydark
+      &__icon svg path
+        fill: $greydark
+      &__link
+        color: $greydark
+
+@include media-breakpoint-down(md)
+  .header
+    &__contact
+      display: none
 
 @include media-breakpoint-down(sm)
   .header
     padding: 20px 0
     &__row  
       justify-content: center
-    &__contact
-      display: none
