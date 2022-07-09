@@ -1,0 +1,84 @@
+.banner
+  height: 120vh
+  background-color: $grey
+  background-position: right center
+  background-size: cover
+  position: relative
+  &__container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 100%
+  &__title
+    max-width: 640px
+    font-size: 48px
+    font-weight: 700
+    line-height: 1.25
+    color: $white
+    letter-spacing: -1px
+    margin-bottom: 24px
+  &__text
+    max-width: 640px
+    font-size: 24px
+    line-height: 1.25
+    color: $white
+  &__footer
+    margin-top: 40px
+    display: flex
+    align-items: center
+  &__btn
+    margin-right: 20px
+  &__btn-descripton
+    font-size: 15px
+    color: $white
+  &__berry-1
+    position: absolute
+    top: 25%
+    left: -70px
+  &__berry-2
+    position: absolute
+    top: 10%
+    right: -50px
+  &__berry-3
+    position: absolute
+    bottom: 12%
+    right: 10%
+  &__leaf-4
+    position: absolute
+    bottom: 2%
+    left: -80px
+
+@media (max-width: 1400px)
+  .banner
+    &__berry-1
+      display: none
+    &__berry-2
+      display: none
+    &__berry-3
+      display: none
+    &__leaf-4
+      display: none
+
+@include media-breakpoint-down(xl)
+  .banner
+    height: auto
+    padding: 180px 0 110px 0
+
+@include media-breakpoint-down(lg)
+  .banner
+    &__title
+      font-size: 24px
+    &__text
+      font-size: 16px
+
+@include media-breakpoint-down(sm)
+  .banner
+    background-image: none !important
+    height: auto
+    padding: 130px 0 60px 0
+    &__footer
+      flex-direction: column
+      align-items: flex-start
+    &__btn
+      margin-right: 0
+      margin-bottom: 24px

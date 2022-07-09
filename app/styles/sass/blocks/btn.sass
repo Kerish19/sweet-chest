@@ -1,0 +1,21 @@
+.btn
+  display: inline-block
+  border: 0
+  font-size: 18px
+  line-height: 1.5
+  color: $greydark
+  font-weight: 500
+  text-decoration: none
+  padding: 30px 50px
+  border-radius: 8px
+  background-color: $accent
+  color: $greydark
+  transition: background-color .3s
+  &:hover, &:focus 
+    background-color: darken($accent, 10%)
+    color: inherit
+
+@include media-breakpoint-down(xl)
+  .btn
+    font-size: 16px
+    padding: 10px 25px

@@ -2,13 +2,31 @@
   max-width: 1210px
   margin: 0 auto
   padding: 0 math.div($gutter, 2)
-.section-title
-  font-size: 11px
-  color: $greydark
-  letter-spacing: 0.1em
-  text-transform: uppercase
-  background-color: #F2F6FA
-  padding: 10px 18px
-  border-radius: 5px
-  max-width: max-content
-  margin-bottom: 24px
+.section
+  &__title
+    font-size: 11px
+    color: $greydark
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    background-color: #F2F6FA
+    padding: 10px 18px
+    border-radius: 5px
+    max-width: max-content
+    margin-bottom: 24px
+.page
+  &__title
+    font-size: 48px
+    letter-spacing: -1px
+    line-height: 1.25
+    font-weight: 500
+    color: $greydark
+    margin-bottom: 80px
+    text-align: center
+.d-none
+  display: none
+
+@include media-breakpoint-down(lg)
+  .page
+    &__title
+      font-size: 24px
+      margin-bottom: 24px
