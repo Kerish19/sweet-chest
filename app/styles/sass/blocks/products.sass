@@ -1,0 +1,111 @@
+.products
+  padding: 20px 0 40px
+  .container
+    position: relative
+
+.products-list
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -10px
+  &__item
+    width: 33.3%
+    padding: 0 10px
+    display: flex
+    margin-bottom: 20px
+
+.product
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  width: 100%
+  &__link
+    display: block
+  &__img  
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
+    height: 245px
+    max-width: 100%
+    width: 100%
+    object-fit: cover
+    margin: auto
+  &__body
+    flex: 1 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    padding: 50px 44px
+    border-bottom-left-radius: 10px
+    border-bottom-right-radius: 10px
+    border: 1px solid #F2F6FA
+  &__title
+    font-size: 24px
+    color: $textcolor
+    line-height: 1.4
+    font-weight: 700
+    margin-bottom: 12px
+    text-decoration: none
+  &__text
+    color: $textcolor
+    font-size: 16px
+    margin-bottom: 24px
+  &__price
+    font-size: 24px
+    color: $grey
+    font-weight: 500
+    margin-bottom: 14px
+  &__footer
+    margin-top: auto
+  &__btn
+    padding: 20px 40px
+  &__berry-1
+    position: absolute
+    z-index: 20
+    top: 14%
+    left: -90px
+  &__leaf-1
+    position: absolute
+    z-index: 20
+    top: 50%
+    right: -90px
+  &__leaf-2
+    position: absolute
+    z-index: 20
+    top: 75%
+    left: -80px
+
+@media (max-width: 1400px)
+  .product
+    &__berry-1
+      display: none
+    &__leaf-1
+      display: none
+    &__leaf-2
+      display: none
+
+@include media-breakpoint-down(xl)
+  .product
+    &__img  
+      height: 225px
+    &__btn
+      padding: 10px 25px
+
+@include media-breakpoint-down(lg)
+  .product
+    &__body
+      padding: 25px 15px
+    &__img  
+      height: 200px
+    &__title
+      font-size: 20px
+  .products-list
+    &__item
+      width: 50%
+
+@include media-breakpoint-down(sm)
+  .products
+    padding: 60px 0 40px
+  .products-list
+    &__item
+      width: 100%
+
+  
