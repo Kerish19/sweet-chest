@@ -1,0 +1,23 @@
+.executor
+  &__row
+    margin: 0 -10px
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+  &__col  
+    position: relative
+    width: 50%
+    padding: 0 10px
+  &__title
+    margin-bottom: 36px
+  &__list
+    margin-bottom: 50px
+    max-width: 420px
+  &__img
+    display: block
+    max-width: 100%
+
+@include media-breakpoint-down(lg)
+  .executor
+    &__title
+      margin-bottom: 24px

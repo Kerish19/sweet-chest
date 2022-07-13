@@ -32,9 +32,33 @@ a
       text-align: left
 .d-none
   display: none
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+  li
+    margin-bottom: 30px
+  li:last-of-type
+    margin-bottom: 0
+  li::before
+    content: ''
+    display: inline-block
+    margin-right: 12px
+    width: 10px
+    height: 10px
+    background-color: #5D6AFB
+    border-radius: 50%
 
+@include media-breakpoint-down(xl)
+  .page
+    &__title
+      font-size: 36px
+      margin-bottom: 36px
 @include media-breakpoint-down(lg)
   .page
     &__title
       font-size: 24px
       margin-bottom: 24px
+  ul
+    li
+      margin-bottom: 18px
